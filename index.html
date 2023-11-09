@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="bumblebee">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" type="image/x-icon" href="logo de liste.jpg">
+
+    <title>Liste de tâches</title>
+</head>
+
+<body>
+
+
+    <div class="container">
+    
+        <header>
+            <h1>Liste de tâches</h1>
+
+            <div class="input-section">
+                <input id="todo-input" type="text" placeholder="⌨️📇 Ecrirez vos tâches ici.."
+                    class="input w-full max-w-xs" />
+                <button id="add-button" class="btn btn-add ">
+                    <i class="bx bx-plus bx-sm"></i>
+                </button>
+            </div>
+        </header>
+
+
+
+        <div class="todos-filter">
+
+            <button id="delete-selected" class="btn btn-ghost delete-selected-btn">
+                Supprimez tâche(s) sélectionnée(s)
+            </button>
+            <button id="delete-all" class="btn btn-ghost delete-all-btn">
+                Supprimez tout
+            </button>
+        </div>
+
+
+    
+        <ul id="all-todos" class="todos-list">
+
+        </ul>
+
+
+      
+        <div class="filters">
+            <div class="dropdown">
+                <button class="dropbtn">Filtres</button>
+                <div class="dropdown-content">
+                    <a href="#" id="all">Toutes les tâches</a>
+                    <a href="#" id="rem">Tâche(s) en cours</a>
+                    <a href="#" id="com">Tâche(s) complétée(s)</a>
+                </div>
+            </div>
+
+        
+            <div class="completed-task">
+                <p>Tâche(s) complétée(s): <span id="c-count">0</span></p>
+            </div>
+            <div class="remaining-task">
+                <p>Totale tâche(s): <span id="r-count">0</span></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+
+</body>
+
+</html>
